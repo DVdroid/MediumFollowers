@@ -23,16 +23,20 @@ struct ContentView: View {
                                    followers: followers,
                                    imageData: viewModel.imageData)
             }
-            .frame(width: geometry.size.width,
-                   height: geometry.size.height,
-                   alignment: .leading)
+            .padding()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .environment(\.colorScheme, .light)
+            
+            ContentView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
 

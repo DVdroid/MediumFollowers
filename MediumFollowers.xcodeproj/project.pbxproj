@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6731A9E25C86CC2005B137A /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731A9D25C86CC2005B137A /* ScaledFont.swift */; };
+		D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731A9D25C86CC2005B137A /* ScaledFont.swift */; };
 		D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29B525C73FF700B4DC67 /* Color+Extension.swift */; };
 		D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */; };
 		D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */; };
@@ -59,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D6731A9D25C86CC2005B137A /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
 		D68D29B525C73FF700B4DC67 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHolder.swift; sourceTree = "<group>"; };
 		D6BEB94925C7288B00D89546 /* MediumFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediumFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +133,7 @@
 				D6BEB96A25C72FA400D89546 /* Model */,
 				D6BEB95C25C7289C00D89546 /* NetworkLayer */,
 				D68D29B525C73FF700B4DC67 /* Color+Extension.swift */,
+				D6731A9D25C86CC2005B137A /* ScaledFont.swift */,
 				D6BEB95025C7288E00D89546 /* Assets.xcassets */,
 				D6BEB95525C7288E00D89546 /* Info.plist */,
 				D6BEB95225C7288E00D89546 /* Preview Content */,
@@ -304,6 +308,7 @@
 				D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */,
 				D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 				D6BEB96225C72E0100D89546 /* Followers.swift in Sources */,
+				D6731A9E25C86CC2005B137A /* ScaledFont.swift in Sources */,
 				D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */,
 				D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */,
 				D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */,
@@ -322,6 +327,7 @@
 				D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */,
 				D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */,
 				D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */,
+				D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */,
 				D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */,
 				D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 			);
