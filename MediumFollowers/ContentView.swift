@@ -48,16 +48,18 @@ extension ContentView {
             getMediumAccountInfo()
         }
 
+        // Use your "Medium" account user name
         private func getMediumAccountInfo() {
-            MediumDataFetcher.getMediumAccountInfo(for: "@anandin02") { [weak self] (accountHolder, followers, error) in
+            MediumDataFetcher.getMediumAccountInfo(for: "{username}") { [weak self] (accountHolder, followers, error) in
                 guard let self = self, error == nil else { return }
                 self.accountHolder = accountHolder
                 self.followers = followers
             }
         }
 
+        // Use your "Medium" account user name
         private func getMediumAccountProfilePicture() {
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "@anandin02") { [weak self] (imageData, response, error)  in
+            MediumDataFetcher.getMediumAccountHolderIcon(for: "{username}") { [weak self] (imageData, response, error)  in
                 guard let self = self, error == nil else { return }
 
                 DispatchQueue.main.async {

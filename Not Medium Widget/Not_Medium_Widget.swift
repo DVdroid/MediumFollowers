@@ -34,7 +34,8 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<MediumInfoEntry>) -> Void) {
 
-        MediumDataFetcher.getMediumAccountInfo(for: "@anandin02") { (accountHolder, followers, error) in
+        // Use your "Medium" account user name
+        MediumDataFetcher.getMediumAccountInfo(for: "{username}") { (accountHolder, followers, error) in
 
             guard let unwrappedAccountHolder = accountHolder, let unwrappedFollowers = followers else {
                 let timeLine = Timeline(entries: [dummyEntry],
@@ -43,7 +44,8 @@ struct Provider: TimelineProvider {
                 return
             }
 
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "@anandin02") { (data, response, error) in
+            // Use your "Medium" account user name
+            MediumDataFetcher.getMediumAccountHolderIcon(for: "{username}") { (data, response, error) in
                 let entry = MediumInfoEntry(date: Date(), accountHolder: unwrappedAccountHolder,
                                             followers: unwrappedFollowers, imageData: data)
                 let timeLine = Timeline(entries: [entry],

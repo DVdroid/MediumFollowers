@@ -124,9 +124,9 @@
 		D6BEB94B25C7288B00D89546 /* MediumFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				D6BEB96B25C72FB300D89546 /* View */,
 				D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */,
 				D6BEB94E25C7288B00D89546 /* ContentView.swift */,
+				D6BEB96B25C72FB300D89546 /* View */,
 				D6BEB96A25C72FA400D89546 /* Model */,
 				D6BEB95C25C7289C00D89546 /* NetworkLayer */,
 				D68D29B525C73FF700B4DC67 /* Color+Extension.swift */,
