@@ -3,23 +3,81 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29B525C73FF700B4DC67 /* Color+Extension.swift */; };
+		D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */; };
 		D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */; };
 		D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB94E25C7288B00D89546 /* ContentView.swift */; };
 		D6BEB95125C7288E00D89546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BEB95025C7288E00D89546 /* Assets.xcassets */; };
 		D6BEB95425C7288E00D89546 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BEB95325C7288E00D89546 /* Preview Assets.xcassets */; };
+		D6BEB95F25C7295500D89546 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB95E25C7295500D89546 /* SwiftSoup */; };
+		D6BEB96225C72E0100D89546 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96125C72E0100D89546 /* Followers.swift */; };
+		D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
+		D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* FollowersCountView.swift */; };
+		D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
+		D6E2F27125C7662600F8DA23 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2F27025C7662600F8DA23 /* WidgetKit.framework */; };
+		D6E2F27325C7662600F8DA23 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2F27225C7662600F8DA23 /* SwiftUI.framework */; };
+		D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27525C7662600F8DA23 /* Not_Medium_Widget.swift */; };
+		D6E2F27925C7662700F8DA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E2F27825C7662700F8DA23 /* Assets.xcassets */; };
+		D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */; };
+		D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */; };
+		D6E2F27F25C7662700F8DA23 /* Not Medium WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */; };
+		D6E2F28725C766D200F8DA23 /* FollowersCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* FollowersCountView.swift */; };
+		D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
+		D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29B525C73FF700B4DC67 /* Color+Extension.swift */; };
+		D6E2F28A25C766D200F8DA23 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96125C72E0100D89546 /* Followers.swift */; };
+		D6E2F28B25C766D200F8DA23 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
+		D6E2F28F25C76C8C00F8DA23 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D6E2F28E25C76C8C00F8DA23 /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D6E2F27D25C7662700F8DA23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6BEB94125C7288B00D89546 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E2F26D25C7662600F8DA23;
+			remoteInfo = "Not Medium WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6E2F28025C7662700F8DA23 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D6E2F27F25C7662700F8DA23 /* Not Medium WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D68D29B525C73FF700B4DC67 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHolder.swift; sourceTree = "<group>"; };
 		D6BEB94925C7288B00D89546 /* MediumFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediumFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumFollowersApp.swift; sourceTree = "<group>"; };
 		D6BEB94E25C7288B00D89546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6BEB95025C7288E00D89546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BEB95325C7288E00D89546 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6BEB95525C7288E00D89546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6BEB96125C72E0100D89546 /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
+		D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumDataFetcher.swift; sourceTree = "<group>"; };
+		D6BEB96725C72F9900D89546 /* FollowersCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCountView.swift; sourceTree = "<group>"; };
+		D6BEB96D25C7312500D89546 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Not Medium WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E2F27025C7662600F8DA23 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D6E2F27225C7662600F8DA23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D6E2F27525C7662600F8DA23 /* Not_Medium_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Not_Medium_Widget.swift; sourceTree = "<group>"; };
+		D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Not_Medium_Widget.intentdefinition; sourceTree = "<group>"; };
+		D6E2F27825C7662700F8DA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6E2F27A25C7662700F8DA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +85,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BEB95F25C7295500D89546 /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E2F26B25C7662600F8DA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E2F27325C7662600F8DA23 /* SwiftUI.framework in Frameworks */,
+				D6E2F27125C7662600F8DA23 /* WidgetKit.framework in Frameworks */,
+				D6E2F28F25C76C8C00F8DA23 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D6BEB94B25C7288B00D89546 /* MediumFollowers */,
+				D6E2F27425C7662600F8DA23 /* Not Medium Widget */,
+				D6E2F26F25C7662600F8DA23 /* Frameworks */,
 				D6BEB94A25C7288B00D89546 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BEB94925C7288B00D89546 /* MediumFollowers.app */,
+				D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,8 +124,12 @@
 		D6BEB94B25C7288B00D89546 /* MediumFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				D6BEB96B25C72FB300D89546 /* View */,
 				D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */,
 				D6BEB94E25C7288B00D89546 /* ContentView.swift */,
+				D6BEB96A25C72FA400D89546 /* Model */,
+				D6BEB95C25C7289C00D89546 /* NetworkLayer */,
+				D68D29B525C73FF700B4DC67 /* Color+Extension.swift */,
 				D6BEB95025C7288E00D89546 /* Assets.xcassets */,
 				D6BEB95525C7288E00D89546 /* Info.plist */,
 				D6BEB95225C7288E00D89546 /* Preview Content */,
@@ -69,6 +145,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D6BEB95C25C7289C00D89546 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		D6BEB96A25C72FA400D89546 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6BEB96125C72E0100D89546 /* Followers.swift */,
+				D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6BEB96B25C72FB300D89546 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6BEB96725C72F9900D89546 /* FollowersCountView.swift */,
+				D6BEB96D25C7312500D89546 /* CircleImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6E2F26F25C7662600F8DA23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6E2F27025C7662600F8DA23 /* WidgetKit.framework */,
+				D6E2F27225C7662600F8DA23 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6E2F27425C7662600F8DA23 /* Not Medium Widget */ = {
+			isa = PBXGroup;
+			children = (
+				D6E2F27525C7662600F8DA23 /* Not_Medium_Widget.swift */,
+				D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */,
+				D6E2F27825C7662700F8DA23 /* Assets.xcassets */,
+				D6E2F27A25C7662700F8DA23 /* Info.plist */,
+			);
+			path = "Not Medium Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +201,40 @@
 				D6BEB94525C7288B00D89546 /* Sources */,
 				D6BEB94625C7288B00D89546 /* Frameworks */,
 				D6BEB94725C7288B00D89546 /* Resources */,
+				D6E2F28025C7662700F8DA23 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E2F27E25C7662700F8DA23 /* PBXTargetDependency */,
+			);
+			name = MediumFollowers;
+			packageProductDependencies = (
+				D6BEB95E25C7295500D89546 /* SwiftSoup */,
+			);
+			productName = MediumFollowers;
+			productReference = D6BEB94925C7288B00D89546 /* MediumFollowers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6E2F26D25C7662600F8DA23 /* Not Medium WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E2F28325C7662700F8DA23 /* Build configuration list for PBXNativeTarget "Not Medium WidgetExtension" */;
+			buildPhases = (
+				D6E2F26A25C7662600F8DA23 /* Sources */,
+				D6E2F26B25C7662600F8DA23 /* Frameworks */,
+				D6E2F26C25C7662600F8DA23 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MediumFollowers;
-			productName = MediumFollowers;
-			productReference = D6BEB94925C7288B00D89546 /* MediumFollowers.app */;
-			productType = "com.apple.product-type.application";
+			name = "Not Medium WidgetExtension";
+			packageProductDependencies = (
+				D6E2F28E25C76C8C00F8DA23 /* SwiftSoup */,
+			);
+			productName = "Not Medium WidgetExtension";
+			productReference = D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +248,9 @@
 					D6BEB94825C7288B00D89546 = {
 						CreatedOnToolsVersion = 12.2;
 					};
+					D6E2F26D25C7662600F8DA23 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 				};
 			};
 			buildConfigurationList = D6BEB94425C7288B00D89546 /* Build configuration list for PBXProject "MediumFollowers" */;
@@ -112,11 +262,15 @@
 				Base,
 			);
 			mainGroup = D6BEB94025C7288B00D89546;
+			packageReferences = (
+				D6BEB95D25C7295500D89546 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = D6BEB94A25C7288B00D89546 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D6BEB94825C7288B00D89546 /* MediumFollowers */,
+				D6E2F26D25C7662600F8DA23 /* Not Medium WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +285,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6E2F26C25C7662600F8DA23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E2F27925C7662700F8DA23 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,12 +300,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */,
+				D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */,
+				D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
+				D6BEB96225C72E0100D89546 /* Followers.swift in Sources */,
 				D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */,
+				D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */,
 				D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */,
+				D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */,
+				D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E2F26A25C7662600F8DA23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E2F28B25C766D200F8DA23 /* CircleImageView.swift in Sources */,
+				D6E2F28725C766D200F8DA23 /* FollowersCountView.swift in Sources */,
+				D6E2F28A25C766D200F8DA23 /* Followers.swift in Sources */,
+				D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */,
+				D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */,
+				D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */,
+				D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */,
+				D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6E2F27E25C7662700F8DA23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E2F26D25C7662600F8DA23 /* Not Medium WidgetExtension */;
+			targetProxy = D6E2F27D25C7662700F8DA23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D6BEB95625C7288E00D89546 /* Debug */ = {
@@ -265,6 +457,7 @@
 		D6BEB95925C7288E00D89546 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +480,7 @@
 		D6BEB95A25C7288E00D89546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +495,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.va.MediumFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6E2F28125C7662700F8DA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6LN4XWA2V;
+				INFOPLIST_FILE = "Not Medium Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.va.MediumFollowers.Not-Medium-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6E2F28225C7662700F8DA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6LN4XWA2V;
+				INFOPLIST_FILE = "Not Medium Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.va.MediumFollowers.Not-Medium-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,7 +563,40 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D6E2F28325C7662700F8DA23 /* Build configuration list for PBXNativeTarget "Not Medium WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E2F28125C7662700F8DA23 /* Debug */,
+				D6E2F28225C7662700F8DA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6BEB95D25C7295500D89546 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6BEB95E25C7295500D89546 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB95D25C7295500D89546 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		D6E2F28E25C76C8C00F8DA23 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BEB95D25C7295500D89546 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6BEB94125C7288B00D89546 /* Project object */;
 }
