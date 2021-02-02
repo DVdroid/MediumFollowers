@@ -74,6 +74,8 @@ struct MediumInfoWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetEntryView(entry: entry)
         }
+        .configurationDisplayName("Your Profile")
+        .description("Keep a tab on the count of your followers")
         .supportedFamilies([.systemSmall])
     }
 }
