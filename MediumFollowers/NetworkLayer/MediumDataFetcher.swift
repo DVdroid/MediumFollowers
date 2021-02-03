@@ -19,6 +19,23 @@ enum MediumDataFetcher {
             let doc = try SwiftSoup.parse(html)
             let head = doc.head()!
             let metaData: Elements = try head.select("meta")
+            let followersData = try doc.body()!.select("script")
+
+            for follower in followersData.array() {
+                let htmlText = try follower.html()
+                let type = htmlText.components(separatedBy: "=")
+                if let firstItem = type.first, firstItem.hasPrefix("window.__APOLLO_STATE__") {
+                    let jsonData = Data(type.last!.utf8)
+                    let decodedResult = try! JSONDecoder().decode(DecodedUsers.self, from: jsonData)
+                    let _ = MediumAccountInfo(users: decodedResult.allUsers)
+                    //print(mediumAccountInfo.accountHolder ?? "")
+                    //print(mediumAccountInfo.followers ?? "")
+
+                    //for follower in mediumAccountInfo.followers! {
+                        //print(follower.profilePictureFullUrl ?? "")
+                    //}
+                }
+            }
 
             var firstName: String?
             var lastName: String?

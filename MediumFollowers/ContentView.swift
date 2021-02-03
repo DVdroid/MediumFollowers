@@ -19,9 +19,9 @@ struct ContentView: View {
                 let accountHolder: AccountHolder = viewModel.accountHolder ?? AccountHolder(firstName: "First", lastName: "last")
                 let followers: Followers = viewModel.followers ?? Followers(count: 0)
 
-                FollowersCountView(accountHolder: accountHolder,
-                                   followers: followers,
-                                   imageData: viewModel.imageData)
+                MediumAccountInfoView(accountHolder: accountHolder,
+                                      followers: followers,
+                                      imageData: viewModel.imageData)
             }
             .padding()
         }
@@ -54,7 +54,7 @@ extension ContentView {
 
         // Use your "Medium" account user name
         private func getMediumAccountInfo() {
-            MediumDataFetcher.getMediumAccountInfo(for: "{username}") { [weak self] (accountHolder, followers, error) in
+            MediumDataFetcher.getMediumAccountInfo(for: "") { [weak self] (accountHolder, followers, error) in
                 guard let self = self, error == nil else { return }
                 self.accountHolder = accountHolder
                 self.followers = followers
@@ -63,7 +63,7 @@ extension ContentView {
 
         // Use your "Medium" account user name
         private func getMediumAccountProfilePicture() {
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "{username}") { [weak self] (imageData, response, error)  in
+            MediumDataFetcher.getMediumAccountHolderIcon(for: "") { [weak self] (imageData, response, error)  in
                 guard let self = self, error == nil else { return }
 
                 DispatchQueue.main.async {

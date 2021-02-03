@@ -20,6 +20,14 @@
 		D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
 		D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* FollowersCountView.swift */; };
 		D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
+		D6C8F8A525C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
+		D6C8F8A625C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
+		D6C8F8A825C9D57800472BAB /* MediumAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */; };
+		D6C8F8A925C9D57800472BAB /* MediumAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */; };
+		D6C8F8AB25CA585B00472BAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AA25CA585B00472BAB /* User.swift */; };
+		D6C8F8AC25CA585B00472BAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AA25CA585B00472BAB /* User.swift */; };
+		D6C8F8AE25CA772600472BAB /* MediumAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */; };
+		D6C8F8AF25CA772600472BAB /* MediumAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */; };
 		D6E2F27125C7662600F8DA23 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2F27025C7662600F8DA23 /* WidgetKit.framework */; };
 		D6E2F27325C7662600F8DA23 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E2F27225C7662600F8DA23 /* SwiftUI.framework */; };
 		D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27525C7662600F8DA23 /* Not_Medium_Widget.swift */; };
@@ -74,6 +82,10 @@
 		D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumDataFetcher.swift; sourceTree = "<group>"; };
 		D6BEB96725C72F9900D89546 /* FollowersCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCountView.swift; sourceTree = "<group>"; };
 		D6BEB96D25C7312500D89546 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		D6C8F8A425C9D34C00472BAB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView.swift; sourceTree = "<group>"; };
+		D6C8F8AA25CA585B00472BAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfo.swift; sourceTree = "<group>"; };
 		D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Not Medium WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E2F27025C7662600F8DA23 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D6E2F27225C7662600F8DA23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -162,6 +174,8 @@
 			children = (
 				D6BEB96125C72E0100D89546 /* Followers.swift */,
 				D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */,
+				D6C8F8AA25CA585B00472BAB /* User.swift */,
+				D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +183,10 @@
 		D6BEB96B25C72FB300D89546 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6BEB96725C72F9900D89546 /* FollowersCountView.swift */,
+				D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */,
+				D6C8F8A425C9D34C00472BAB /* ProfileView.swift */,
 				D6BEB96D25C7312500D89546 /* CircleImageView.swift */,
+				D6BEB96725C72F9900D89546 /* FollowersCountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,16 +320,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C8F8AB25CA585B00472BAB /* User.swift in Sources */,
 				D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */,
 				D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */,
 				D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 				D6BEB96225C72E0100D89546 /* Followers.swift in Sources */,
 				D6731A9E25C86CC2005B137A /* ScaledFont.swift in Sources */,
+				D6C8F8AE25CA772600472BAB /* MediumAccountInfo.swift in Sources */,
 				D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */,
 				D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */,
 				D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */,
 				D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */,
+				D6C8F8A525C9D34C00472BAB /* ProfileView.swift in Sources */,
 				D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */,
+				D6C8F8A825C9D57800472BAB /* MediumAccountInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,13 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E2F28B25C766D200F8DA23 /* CircleImageView.swift in Sources */,
+				D6C8F8A925C9D57800472BAB /* MediumAccountInfoView.swift in Sources */,
 				D6E2F28725C766D200F8DA23 /* FollowersCountView.swift in Sources */,
+				D6C8F8A625C9D34C00472BAB /* ProfileView.swift in Sources */,
 				D6E2F28A25C766D200F8DA23 /* Followers.swift in Sources */,
 				D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */,
 				D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */,
 				D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */,
+				D6C8F8AC25CA585B00472BAB /* User.swift in Sources */,
 				D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */,
 				D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */,
+				D6C8F8AF25CA772600472BAB /* MediumAccountInfo.swift in Sources */,
 				D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
