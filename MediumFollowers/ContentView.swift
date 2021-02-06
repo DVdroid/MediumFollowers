@@ -13,17 +13,30 @@ struct ContentView: View {
 
     var body: some View {
 
-        GeometryReader { geometry in
+        GeometryReader { proxy in
 
-            VStack {
-                let accountHolder: AccountHolder = viewModel.accountHolder ?? AccountHolder(firstName: "First", lastName: "last")
-                let followers: Followers = viewModel.followers ?? Followers(count: 0)
+            if let unwrappedMediumAccountInfo = viewModel.mediumAccountInfo {
+                MediumAccountInfoView_Large(imageData: nil,
+                                            size: CGSize(width: proxy.size.width, height: proxy.size.height),
+                                            mediumAccountInfo:unwrappedMediumAccountInfo)
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+            } else {
 
-                MediumAccountInfoView(accountHolder: accountHolder,
-                                      followers: followers,
-                                      imageData: viewModel.imageData)
+                let user = User(id: "",
+                                username: MediumAccountInfo.Constant.userName,
+                                name: "user name",
+                                bio: "qwertyytrewq",
+                                imageId: nil,
+                                twitterScreenName: nil,
+                                mediumMemberAt: nil,
+                                socialStats: nil,
+                                navItems: nil)
+
+                MediumAccountInfoView_Large(imageData: nil,
+                                            size: CGSize(width: proxy.size.width, height: proxy.size.height),
+                                            mediumAccountInfo: MediumAccountInfo(users: [user]))
+                    .frame(width: proxy.size.width, height: proxy.size.height)
             }
-            .padding()
         }
     }
 }
@@ -43,8 +56,7 @@ struct ContentView_Previews: PreviewProvider {
 extension ContentView {
 
     class ViewModel: ObservableObject {
-        @Published var accountHolder: AccountHolder?
-        @Published var followers: Followers?
+        @Published var mediumAccountInfo: MediumAccountInfo?
         @Published var imageData: Data?
 
         init(){
@@ -54,16 +66,15 @@ extension ContentView {
 
         // Use your "Medium" account user name
         private func getMediumAccountInfo() {
-            MediumDataFetcher.getMediumAccountInfo(for: "") { [weak self] (accountHolder, followers, error) in
+            MediumDataFetcher.getMediumAccountInfo(for: "@\(MediumAccountInfo.Constant.userName)") { [weak self] (mediumAccountInfo, error) in
                 guard let self = self, error == nil else { return }
-                self.accountHolder = accountHolder
-                self.followers = followers
+                self.mediumAccountInfo = mediumAccountInfo
             }
         }
 
         // Use your "Medium" account user name
         private func getMediumAccountProfilePicture() {
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "") { [weak self] (imageData, response, error)  in
+            MediumDataFetcher.getMediumAccountHolderIcon(for: "@\(MediumAccountInfo.Constant.userName)") { [weak self] (imageData, response, error)  in
                 guard let self = self, error == nil else { return }
 
                 DispatchQueue.main.async {

@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct User: Decodable {
+struct User: Decodable, Hashable, Equatable {
+
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
 
     private static let profilePictureUrl = "https://cdn-images-1.medium.com/fit/c/150/150/"
 
@@ -21,9 +25,23 @@ struct User: Decodable {
     let socialStats: SocialStats?
     let navItems: [NavItem]?
 
-    var profilePictureFullUrl: URL? {
-        guard let unwrappedImageId = imageId else { return nil }
-        return URL(string: User.profilePictureUrl + unwrappedImageId)
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    var firstName: String {
+        guard let unwrappedName = name else { return "" }
+        return unwrappedName.components(separatedBy: " ").first ?? ""
+    }
+
+    var lastName: String {
+        guard let unwrappedName = name else { return "" }
+        return unwrappedName.components(separatedBy: " ").last ?? ""
+    }
+
+    var profilePictureFullUrl: String {
+        guard let unwrappedImageId = imageId else { return "" }
+        return User.profilePictureUrl + unwrappedImageId
     }
 }
 

@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D622D8D625CDCC87002B17EE /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622D8D525CDCC87002B17EE /* MultilineTextView.swift */; };
+		D622D8D725CDCC87002B17EE /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622D8D525CDCC87002B17EE /* MultilineTextView.swift */; };
 		D6731A9E25C86CC2005B137A /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731A9D25C86CC2005B137A /* ScaledFont.swift */; };
 		D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6731A9D25C86CC2005B137A /* ScaledFont.swift */; };
 		D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29B525C73FF700B4DC67 /* Color+Extension.swift */; };
-		D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */; };
+		D6925D2B25CE51980081F753 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D2A25CE51980081F753 /* TextView.swift */; };
+		D6925D2C25CE51980081F753 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D2A25CE51980081F753 /* TextView.swift */; };
+		D6925D2E25CE91990081F753 /* MediumAccountInfoView_Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D2D25CE91990081F753 /* MediumAccountInfoView_Medium.swift */; };
+		D6925D2F25CE91990081F753 /* MediumAccountInfoView_Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D2D25CE91990081F753 /* MediumAccountInfoView_Medium.swift */; };
+		D6925D3125CEBA4E0081F753 /* MediumAccountInfoView_Large.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D3025CEBA4E0081F753 /* MediumAccountInfoView_Large.swift */; };
+		D6925D3225CEBA4E0081F753 /* MediumAccountInfoView_Large.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D3025CEBA4E0081F753 /* MediumAccountInfoView_Large.swift */; };
+		D6925D3425CF1C8D0081F753 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D3325CF1C8C0081F753 /* FollowersView.swift */; };
+		D6925D3525CF1C8D0081F753 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6925D3325CF1C8C0081F753 /* FollowersView.swift */; };
+		D6A6027F25CF49500040430C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6027E25CF49500040430C /* ImageLoader.swift */; };
+		D6A6028025CF49500040430C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6027E25CF49500040430C /* ImageLoader.swift */; };
+		D6A6028225CF54650040430C /* default-profile-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6A6028125CF54650040430C /* default-profile-icon.jpg */; };
 		D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */; };
 		D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB94E25C7288B00D89546 /* ContentView.swift */; };
 		D6BEB95125C7288E00D89546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BEB95025C7288E00D89546 /* Assets.xcassets */; };
 		D6BEB95425C7288E00D89546 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BEB95325C7288E00D89546 /* Preview Assets.xcassets */; };
 		D6BEB95F25C7295500D89546 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D6BEB95E25C7295500D89546 /* SwiftSoup */; };
-		D6BEB96225C72E0100D89546 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96125C72E0100D89546 /* Followers.swift */; };
 		D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
-		D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* FollowersCountView.swift */; };
+		D6BEB96825C72F9900D89546 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* CounterView.swift */; };
 		D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
 		D6C8F8A525C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
 		D6C8F8A625C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
-		D6C8F8A825C9D57800472BAB /* MediumAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */; };
-		D6C8F8A925C9D57800472BAB /* MediumAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */; };
+		D6C8F8A825C9D57800472BAB /* MediumAccountInfoView_Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */; };
+		D6C8F8A925C9D57800472BAB /* MediumAccountInfoView_Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */; };
 		D6C8F8AB25CA585B00472BAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AA25CA585B00472BAB /* User.swift */; };
 		D6C8F8AC25CA585B00472BAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AA25CA585B00472BAB /* User.swift */; };
 		D6C8F8AE25CA772600472BAB /* MediumAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */; };
@@ -35,11 +46,9 @@
 		D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */; };
 		D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D6E2F27725C7662600F8DA23 /* Not_Medium_Widget.intentdefinition */; };
 		D6E2F27F25C7662700F8DA23 /* Not Medium WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */; };
-		D6E2F28725C766D200F8DA23 /* FollowersCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* FollowersCountView.swift */; };
+		D6E2F28725C766D200F8DA23 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* CounterView.swift */; };
 		D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
 		D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D29B525C73FF700B4DC67 /* Color+Extension.swift */; };
-		D6E2F28A25C766D200F8DA23 /* Followers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96125C72E0100D89546 /* Followers.swift */; };
 		D6E2F28B25C766D200F8DA23 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
 		D6E2F28F25C76C8C00F8DA23 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D6E2F28E25C76C8C00F8DA23 /* SwiftSoup */; };
 /* End PBXBuildFile section */
@@ -69,21 +78,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D622D8D525CDCC87002B17EE /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
 		D6731A9D25C86CC2005B137A /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
 		D68D29B525C73FF700B4DC67 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHolder.swift; sourceTree = "<group>"; };
+		D6925D2A25CE51980081F753 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		D6925D2D25CE91990081F753 /* MediumAccountInfoView_Medium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView_Medium.swift; sourceTree = "<group>"; };
+		D6925D3025CEBA4E0081F753 /* MediumAccountInfoView_Large.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView_Large.swift; sourceTree = "<group>"; };
+		D6925D3325CF1C8C0081F753 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
+		D6A6027E25CF49500040430C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		D6A6028125CF54650040430C /* default-profile-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default-profile-icon.jpg"; sourceTree = "<group>"; };
 		D6BEB94925C7288B00D89546 /* MediumFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediumFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BEB94C25C7288B00D89546 /* MediumFollowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumFollowersApp.swift; sourceTree = "<group>"; };
 		D6BEB94E25C7288B00D89546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6BEB95025C7288E00D89546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BEB95325C7288E00D89546 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6BEB95525C7288E00D89546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BEB96125C72E0100D89546 /* Followers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Followers.swift; sourceTree = "<group>"; };
 		D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumDataFetcher.swift; sourceTree = "<group>"; };
-		D6BEB96725C72F9900D89546 /* FollowersCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCountView.swift; sourceTree = "<group>"; };
+		D6BEB96725C72F9900D89546 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D6BEB96D25C7312500D89546 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		D6C8F8A425C9D34C00472BAB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView.swift; sourceTree = "<group>"; };
+		D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView_Small.swift; sourceTree = "<group>"; };
 		D6C8F8AA25CA585B00472BAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfo.swift; sourceTree = "<group>"; };
 		D6E2F26E25C7662600F8DA23 /* Not Medium WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Not Medium WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +162,7 @@
 				D6731A9D25C86CC2005B137A /* ScaledFont.swift */,
 				D6BEB95025C7288E00D89546 /* Assets.xcassets */,
 				D6BEB95525C7288E00D89546 /* Info.plist */,
+				D6A6028125CF54650040430C /* default-profile-icon.jpg */,
 				D6BEB95225C7288E00D89546 /* Preview Content */,
 			);
 			path = MediumFollowers;
@@ -165,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */,
+				D6A6027E25CF49500040430C /* ImageLoader.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -172,8 +188,6 @@
 		D6BEB96A25C72FA400D89546 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6BEB96125C72E0100D89546 /* Followers.swift */,
-				D68D29BA25C745FF00B4DC67 /* AccountHolder.swift */,
 				D6C8F8AA25CA585B00472BAB /* User.swift */,
 				D6C8F8AD25CA772600472BAB /* MediumAccountInfo.swift */,
 			);
@@ -183,10 +197,15 @@
 		D6BEB96B25C72FB300D89546 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6C8F8A725C9D57800472BAB /* MediumAccountInfoView.swift */,
+				D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */,
+				D6925D2D25CE91990081F753 /* MediumAccountInfoView_Medium.swift */,
+				D6925D3025CEBA4E0081F753 /* MediumAccountInfoView_Large.swift */,
 				D6C8F8A425C9D34C00472BAB /* ProfileView.swift */,
 				D6BEB96D25C7312500D89546 /* CircleImageView.swift */,
-				D6BEB96725C72F9900D89546 /* FollowersCountView.swift */,
+				D6BEB96725C72F9900D89546 /* CounterView.swift */,
+				D622D8D525CDCC87002B17EE /* MultilineTextView.swift */,
+				D6925D2A25CE51980081F753 /* TextView.swift */,
+				D6925D3325CF1C8C0081F753 /* FollowersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +321,7 @@
 			files = (
 				D6BEB95425C7288E00D89546 /* Preview Assets.xcassets in Resources */,
 				D6BEB95125C7288E00D89546 /* Assets.xcassets in Resources */,
+				D6A6028225CF54650040430C /* default-profile-icon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,19 +341,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C8F8AB25CA585B00472BAB /* User.swift in Sources */,
+				D6925D3125CEBA4E0081F753 /* MediumAccountInfoView_Large.swift in Sources */,
 				D68D29B625C73FF700B4DC67 /* Color+Extension.swift in Sources */,
-				D68D29BB25C745FF00B4DC67 /* AccountHolder.swift in Sources */,
 				D6E2F27C25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
-				D6BEB96225C72E0100D89546 /* Followers.swift in Sources */,
 				D6731A9E25C86CC2005B137A /* ScaledFont.swift in Sources */,
+				D6925D2E25CE91990081F753 /* MediumAccountInfoView_Medium.swift in Sources */,
 				D6C8F8AE25CA772600472BAB /* MediumAccountInfo.swift in Sources */,
 				D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */,
 				D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */,
+				D6925D2B25CE51980081F753 /* TextView.swift in Sources */,
 				D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */,
+				D6925D3425CF1C8D0081F753 /* FollowersView.swift in Sources */,
+				D622D8D625CDCC87002B17EE /* MultilineTextView.swift in Sources */,
 				D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */,
 				D6C8F8A525C9D34C00472BAB /* ProfileView.swift in Sources */,
-				D6BEB96825C72F9900D89546 /* FollowersCountView.swift in Sources */,
-				D6C8F8A825C9D57800472BAB /* MediumAccountInfoView.swift in Sources */,
+				D6BEB96825C72F9900D89546 /* CounterView.swift in Sources */,
+				D6A6027F25CF49500040430C /* ImageLoader.swift in Sources */,
+				D6C8F8A825C9D57800472BAB /* MediumAccountInfoView_Small.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +366,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E2F28B25C766D200F8DA23 /* CircleImageView.swift in Sources */,
-				D6C8F8A925C9D57800472BAB /* MediumAccountInfoView.swift in Sources */,
-				D6E2F28725C766D200F8DA23 /* FollowersCountView.swift in Sources */,
+				D6C8F8A925C9D57800472BAB /* MediumAccountInfoView_Small.swift in Sources */,
+				D6E2F28725C766D200F8DA23 /* CounterView.swift in Sources */,
 				D6C8F8A625C9D34C00472BAB /* ProfileView.swift in Sources */,
-				D6E2F28A25C766D200F8DA23 /* Followers.swift in Sources */,
+				D622D8D725CDCC87002B17EE /* MultilineTextView.swift in Sources */,
 				D6E2F28925C766D200F8DA23 /* Color+Extension.swift in Sources */,
+				D6925D3525CF1C8D0081F753 /* FollowersView.swift in Sources */,
 				D6E2F27625C7662600F8DA23 /* Not_Medium_Widget.swift in Sources */,
-				D6E2F28625C766D200F8DA23 /* AccountHolder.swift in Sources */,
+				D6925D3225CEBA4E0081F753 /* MediumAccountInfoView_Large.swift in Sources */,
+				D6925D2C25CE51980081F753 /* TextView.swift in Sources */,
+				D6A6028025CF49500040430C /* ImageLoader.swift in Sources */,
+				D6925D2F25CE91990081F753 /* MediumAccountInfoView_Medium.swift in Sources */,
 				D6C8F8AC25CA585B00472BAB /* User.swift in Sources */,
 				D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */,
 				D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */,
