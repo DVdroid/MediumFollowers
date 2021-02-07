@@ -56,7 +56,7 @@ struct MediumAccountInfo {
                                      navItems: nil)]
 
     enum Constant {
-        static let userName = "anandin02"
+        static let userName = ""
     }
 
     let users: [User]
