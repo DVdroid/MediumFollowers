@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MediumAccountInfoView_Large: View {
 
-    let imageData: Data?
+    let images: [UIImage]?
     let size: CGSize
     let mediumAccountInfo: MediumAccountInfo
 
@@ -27,7 +27,6 @@ struct MediumAccountInfoView_Large: View {
         size.width * 0.075
     }
 
-    private let defaultImageUrl = "https://medium.com/feed/"
 
     var body: some View {
 
@@ -59,13 +58,21 @@ struct MediumAccountInfoView_Large: View {
 
                     Spacer()
 
-                    let fullProfilePictureUrl = defaultImageUrl + (mediumAccountInfo.accountHolder?.username)!
-                    ProfileView(url: URL(string: fullProfilePictureUrl)!,
-                                title: "Joined : \(mediumAccountInfo.joiningDate)",
-                                size: CGSize(width: size.width * 0.35, height: size.height * 0.4),
-                                titleFontSize: (size.height * 0.03),
-                                imageOffset: (-(size.height * 0.05), 0),
-                                titleOffset: (-25, 4))
+                    if let unwrappedImages = images {
+                        ProfileView(title: "Joined : \(mediumAccountInfo.joiningDate)",
+                                    size: CGSize(width: size.width * 0.35, height: size.height * 0.4),
+                                    titleFontSize: (size.height * 0.03),
+                                    imageOffset: (-(size.height * 0.05), 0),
+                                    titleOffset: (-25, 4),
+                                    image: unwrappedImages.first)
+                    } else {
+                        ProfileView(title: "Joined : \(mediumAccountInfo.joiningDate)",
+                                    size: CGSize(width: size.width * 0.35, height: size.height * 0.4),
+                                    titleFontSize: (size.height * 0.03),
+                                    imageOffset: (-(size.height * 0.05), 0),
+                                    titleOffset: (-25, 4),
+                                    image: nil)
+                    }
                 }
                 .padding(.top, 100)
                 .frame(width: size.width, height: size.height * 0.3)
@@ -76,7 +83,9 @@ struct MediumAccountInfoView_Large: View {
 
             Spacer()
 
-            FollowersView(size: size, mediumAccountInfo: mediumAccountInfo)
+            FollowersView(images: images,
+                          size: size,
+                          mediumAccountInfo: mediumAccountInfo)
                 .padding()
         }
         .frame(width: size.width, height: size.height)
@@ -90,12 +99,12 @@ struct MediumAccountInfoView_Large_Previews: PreviewProvider {
     static var previews: some View {
 
         Group {
-            MediumAccountInfoView_Large(imageData: nil,
+            MediumAccountInfoView_Large(images: nil,
                                         size: CGSize(width: 350, height: 350),
                                         mediumAccountInfo: MediumAccountInfo(users: MediumAccountInfo.users))
                 .environment(\.colorScheme, .light)
 
-            MediumAccountInfoView_Large(imageData: nil,
+            MediumAccountInfoView_Large(images: nil,
                                         size: CGSize(width: 350, height: 350),
                                         mediumAccountInfo: MediumAccountInfo(users: MediumAccountInfo.users))
                 .environment(\.colorScheme, .dark)

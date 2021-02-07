@@ -31,6 +31,8 @@
 		D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */; };
 		D6BEB96825C72F9900D89546 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96725C72F9900D89546 /* CounterView.swift */; };
 		D6BEB96E25C7312500D89546 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BEB96D25C7312500D89546 /* CircleImageView.swift */; };
+		D6C3D99625D0201800A1E957 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C3D99525D0201800A1E957 /* ImageDownloader.swift */; };
+		D6C3D99725D0201800A1E957 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C3D99525D0201800A1E957 /* ImageDownloader.swift */; };
 		D6C8F8A525C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
 		D6C8F8A625C9D34C00472BAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A425C9D34C00472BAB /* ProfileView.swift */; };
 		D6C8F8A825C9D57800472BAB /* MediumAccountInfoView_Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */; };
@@ -96,6 +98,7 @@
 		D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumDataFetcher.swift; sourceTree = "<group>"; };
 		D6BEB96725C72F9900D89546 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D6BEB96D25C7312500D89546 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		D6C3D99525D0201800A1E957 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		D6C8F8A425C9D34C00472BAB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D6C8F8A725C9D57800472BAB /* MediumAccountInfoView_Small.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAccountInfoView_Small.swift; sourceTree = "<group>"; };
 		D6C8F8AA25CA585B00472BAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 			children = (
 				D6BEB96425C72F3C00D89546 /* MediumDataFetcher.swift */,
 				D6A6027E25CF49500040430C /* ImageLoader.swift */,
+				D6C3D99525D0201800A1E957 /* ImageDownloader.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -348,6 +352,7 @@
 				D6925D2E25CE91990081F753 /* MediumAccountInfoView_Medium.swift in Sources */,
 				D6C8F8AE25CA772600472BAB /* MediumAccountInfo.swift in Sources */,
 				D6BEB94F25C7288B00D89546 /* ContentView.swift in Sources */,
+				D6C3D99625D0201800A1E957 /* ImageDownloader.swift in Sources */,
 				D6BEB96525C72F3C00D89546 /* MediumDataFetcher.swift in Sources */,
 				D6925D2B25CE51980081F753 /* TextView.swift in Sources */,
 				D6BEB94D25C7288B00D89546 /* MediumFollowersApp.swift in Sources */,
@@ -381,6 +386,7 @@
 				D6731A9F25C86CC3005B137A /* ScaledFont.swift in Sources */,
 				D6E2F28825C766D200F8DA23 /* MediumDataFetcher.swift in Sources */,
 				D6C8F8AF25CA772600472BAB /* MediumAccountInfo.swift in Sources */,
+				D6C3D99725D0201800A1E957 /* ImageDownloader.swift in Sources */,
 				D6E2F27B25C7662700F8DA23 /* Not_Medium_Widget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,8 +29,8 @@ enum MediumDataFetcher {
                     let mediumAccountInfo = MediumAccountInfo(users: decodedResult.allUsers)
 
                     #if DEBUG
-                    print(mediumAccountInfo.accountHolder ?? "")
-                    print(mediumAccountInfo.followers ?? "")
+                    //print(mediumAccountInfo.accountHolder ?? "")
+                    //print(mediumAccountInfo.followers ?? "")
                     #endif
 
                     completion(mediumAccountInfo, nil)

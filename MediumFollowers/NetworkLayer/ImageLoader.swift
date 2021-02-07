@@ -14,10 +14,13 @@ import Foundation
 class ImageLoader: ObservableObject {
 
     @Published var image: UIImage?
-    private let url: URL
+    private(set) var isLoading = false
+    private let url: URL?
     private var cancellable: AnyCancellable?
 
-    init(url: URL) {
+    private static let imageProcessingQueue = DispatchQueue(label: "image-processing")
+
+    init(url: URL?) {
         self.url = url
     }
 
@@ -27,17 +30,48 @@ class ImageLoader: ObservableObject {
 
     func load() {
 
-        if url.relativePath.contains("www.google.com") {
+        guard let unwrappedUrl = self.url else {
             return
         }
-        cancellable = URLSession.shared.dataTaskPublisher(for: url)
+
+        cancellable = URLSession.shared.dataTaskPublisher(for: unwrappedUrl)
             .map { UIImage(data: $0.data) }
             .replaceError(with: nil)
+            .handleEvents(receiveSubscription: { [weak self] _ in self?.onStart() },
+                          receiveCompletion: { [weak self] _ in self?.onFinish(isCancelled: false) },
+                          receiveCancel: { [weak self] in self?.onFinish(isCancelled: true) })
+            .subscribe(on: Self.imageProcessingQueue)
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] in self?.image = $0 }
+            .sink(receiveCompletion: { (status) in
+                switch status {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .finished:
+                    break
+                }
+            })
+            { [weak self] in self?.process(image: $0) }
     }
 
     func cancel() {
+        print("cancel")
         cancellable?.cancel()
     }
+
+    private func onStart() {
+        print("onStart")
+        isLoading = true
+    }
+
+    private func process(image: UIImage?) {
+        print(image ?? "")
+        self.image = image
+    }
+
+    private func onFinish(isCancelled: Bool) {
+        print("onFinish with isCancelled: \(isCancelled)")
+        isLoading = false
+    }
+
+    
 }

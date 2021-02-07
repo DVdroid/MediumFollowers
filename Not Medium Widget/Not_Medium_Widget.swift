@@ -9,9 +9,9 @@ import WidgetKit
 import SwiftUI
 
 struct MediumInfoEntry: TimelineEntry {
+    let images: [UIImage]?
     var date: Date
     let mediumAccountInfo: MediumAccountInfo
-    let imageData: Data?
 }
 
 struct Provider: TimelineProvider {
@@ -26,7 +26,7 @@ struct Provider: TimelineProvider {
                         mediumMemberAt: nil,
                         socialStats: nil,
                         navItems: nil)
-        return MediumInfoEntry(date: Date(), mediumAccountInfo: MediumAccountInfo(users: [user]), imageData: nil)
+        return MediumInfoEntry(images: nil, date: Date(), mediumAccountInfo: MediumAccountInfo(users: [user]))
     }
 
     func placeholder(in context: Context) -> MediumInfoEntry {
@@ -49,15 +49,43 @@ struct Provider: TimelineProvider {
                 return
             }
 
-            // Use your "Medium" account user name
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "@\(MediumAccountInfo.Constant.userName)") { (data, response, error) in
-                let entry = MediumInfoEntry(date: Date(), mediumAccountInfo: unwrappedMediumAccountInfo, imageData: data)
+            var images: [UIImage] = []
+            var imageUrls: [String] = []
+            if let unwrappedProfilePictureFullUrl = unwrappedMediumAccountInfo.accountHolder?.profilePictureFullUrl {
+                imageUrls.append(unwrappedProfilePictureFullUrl)
+            }
+            if let unwrappedFollowers = unwrappedMediumAccountInfo.followers {
+                for follower in unwrappedFollowers {
+                    imageUrls.append(follower.profilePictureFullUrl)
+                }
+            }
+
+            let group = DispatchGroup()
+            for imageUrl in imageUrls {
+                guard let url = URL(string: imageUrl) else { continue }
+
+                group.enter()
+                guard let imageData = try? Data(contentsOf: url),
+                      let image = UIImage(data: imageData) else {
+                    group.leave()
+                    continue
+                }
+
+                images.append(image)
+                group.leave()
+            }
+
+            group.notify(queue: .main) {
+
+                let entry = MediumInfoEntry(images: images,
+                                            date: Date(),
+                                            mediumAccountInfo: unwrappedMediumAccountInfo)
                 let timeLine = Timeline(entries: [entry],
                                         policy: TimelineReloadPolicy.after(Calendar.current.date(byAdding: .day, value: 1, to: Date())!))
                 completion(timeLine)
             }
-        }
 
+        }
     }
 }
 
@@ -72,22 +100,22 @@ struct WidgetEntryView: View {
 
             switch family {
             case .systemSmall:
-                MediumAccountInfoView_Small(imageData: entry.imageData,
-                                            size: proxy.size, mediumAccountInfo:
-                                                entry.mediumAccountInfo)
+                MediumAccountInfoView_Small(images: entry.images,
+                                            size: proxy.size,
+                                            mediumAccountInfo: entry.mediumAccountInfo)
+                    .widgetURL(entry.mediumAccountInfo.profileUrl)
             case .systemMedium:
-                MediumAccountInfoView_Medium(imageData: entry.imageData,
-                                             size: proxy.size, mediumAccountInfo:
-                                                entry.mediumAccountInfo)
+                MediumAccountInfoView_Medium(images: entry.images,
+                                             size: proxy.size,
+                                             mediumAccountInfo: entry.mediumAccountInfo)
+                    .widgetURL(entry.mediumAccountInfo.profileUrl)
             case .systemLarge:
-                MediumAccountInfoView_Large(imageData: entry.imageData,
-                                            size: proxy.size, mediumAccountInfo:
-                                                entry.mediumAccountInfo)
-
+                MediumAccountInfoView_Large(images: entry.images,
+                                            size: proxy.size,
+                                            mediumAccountInfo: entry.mediumAccountInfo)
+                    .widgetURL(entry.mediumAccountInfo.profileUrl)
             @unknown default:
-                MediumAccountInfoView_Small(imageData: entry.imageData,
-                                            size: proxy.size, mediumAccountInfo:
-                                                entry.mediumAccountInfo)
+                fatalError()
             }
         }
     }
@@ -111,9 +139,9 @@ struct MediumInfoWidget: Widget {
 
 struct MediumInfoWidget_Previews: PreviewProvider {
 
-    private static let dummyEntry = MediumInfoEntry(date: Date(),
-                                                    mediumAccountInfo: MediumAccountInfo(users: MediumAccountInfo.users),
-                                                    imageData: nil)
+    private static let dummyEntry = MediumInfoEntry(images: nil,
+                                                    date: Date(),
+                                                    mediumAccountInfo: MediumAccountInfo(users: MediumAccountInfo.users))
     static var previews: some View {
 
         Group {

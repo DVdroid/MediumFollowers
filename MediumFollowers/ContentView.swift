@@ -16,7 +16,7 @@ struct ContentView: View {
         GeometryReader { proxy in
 
             if let unwrappedMediumAccountInfo = viewModel.mediumAccountInfo {
-                MediumAccountInfoView_Large(imageData: nil,
+                MediumAccountInfoView_Large(images: nil,
                                             size: CGSize(width: proxy.size.width, height: proxy.size.height),
                                             mediumAccountInfo:unwrappedMediumAccountInfo)
                     .frame(width: proxy.size.width, height: proxy.size.height)
@@ -32,7 +32,7 @@ struct ContentView: View {
                                 socialStats: nil,
                                 navItems: nil)
 
-                MediumAccountInfoView_Large(imageData: nil,
+                MediumAccountInfoView_Large(images: nil,
                                             size: CGSize(width: proxy.size.width, height: proxy.size.height),
                                             mediumAccountInfo: MediumAccountInfo(users: [user]))
                     .frame(width: proxy.size.width, height: proxy.size.height)
@@ -60,7 +60,6 @@ extension ContentView {
         @Published var imageData: Data?
 
         init(){
-            getMediumAccountProfilePicture()
             getMediumAccountInfo()
         }
 
@@ -69,17 +68,6 @@ extension ContentView {
             MediumDataFetcher.getMediumAccountInfo(for: "@\(MediumAccountInfo.Constant.userName)") { [weak self] (mediumAccountInfo, error) in
                 guard let self = self, error == nil else { return }
                 self.mediumAccountInfo = mediumAccountInfo
-            }
-        }
-
-        // Use your "Medium" account user name
-        private func getMediumAccountProfilePicture() {
-            MediumDataFetcher.getMediumAccountHolderIcon(for: "@\(MediumAccountInfo.Constant.userName)") { [weak self] (imageData, response, error)  in
-                guard let self = self, error == nil else { return }
-
-                DispatchQueue.main.async {
-                    self.imageData = imageData
-                }
             }
         }
     }

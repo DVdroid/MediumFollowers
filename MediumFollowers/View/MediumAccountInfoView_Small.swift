@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MediumAccountInfoView_Small: View {
 
-    let imageData: Data?
+    let images: [UIImage]?
     let size: CGSize
     let mediumAccountInfo: MediumAccountInfo
 
@@ -23,7 +23,6 @@ struct MediumAccountInfoView_Small: View {
         return colorScheme == .dark ? .yellow : .white
     }
 
-    private let defaultImageUrl = "https://medium.com/feed/"
     var body: some View {
 
         VStack {
@@ -35,17 +34,23 @@ struct MediumAccountInfoView_Small: View {
                                                   TextView(text: unwrappedAccountHolder.lastName, fontSize: fontSize)],
                                       alignment: .leading,
                                       size: CGSize(width: size.width * 0.25, height: size.height * 0.1))
-
-
                     Spacer()
 
-                    let fullProfilePictureUrl = defaultImageUrl + (mediumAccountInfo.accountHolder?.username)!
-                    ProfileView(url: URL(string: fullProfilePictureUrl)!,
-                                title: nil,
-                                size: CGSize(width: size.width * 0.4, height: size.height * 0.4),
-                                titleFontSize: (size.height * 0.08),
-                                imageOffset: (-(size.height * 0.1), 0),
-                                titleOffset: (-15, 4))
+                    if let unwrappedImages = images {
+                        ProfileView(title: nil,
+                                    size: CGSize(width: size.width * 0.4, height: size.height * 0.4),
+                                    titleFontSize: (size.height * 0.08),
+                                    imageOffset: (-(size.height * 0.1), 0),
+                                    titleOffset: (-15, 4),
+                                    image: unwrappedImages.first)
+                    } else {
+                        ProfileView(title: nil,
+                                    size: CGSize(width: size.width * 0.4, height: size.height * 0.4),
+                                    titleFontSize: (size.height * 0.08),
+                                    imageOffset: (-(size.height * 0.1), 0),
+                                    titleOffset: (-15, 4),
+                                    image: nil)
+                    }
                 }.padding(.top, -20)
 
                 CounterView(count: String(mediumAccountInfo.followersCount),
@@ -77,12 +82,12 @@ struct MediumAccountInfoView_Small_Previews: PreviewProvider {
     static var previews: some View {
 
         Group {
-            MediumAccountInfoView_Small(imageData: nil,
+            MediumAccountInfoView_Small(images: nil,
                                         size: CGSize(width: 180, height: 180),
                                         mediumAccountInfo: MediumAccountInfo(users: [user]))
                 .environment(\.colorScheme, .light)
 
-            MediumAccountInfoView_Small(imageData: nil,
+            MediumAccountInfoView_Small(images: nil,
                                         size: CGSize(width: 180, height: 180),
                                         mediumAccountInfo: MediumAccountInfo(users: [user]))
                 .environment(\.colorScheme, .dark)

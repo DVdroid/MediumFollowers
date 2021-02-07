@@ -9,15 +9,18 @@ import SwiftUI
 
 struct CircleImageView: View {
 
+    let image: UIImage?
     @Environment(\.colorScheme) var colorScheme
-    var image: UIImage?
-    
+
     var borderColor: Color {
         return colorScheme == .dark ? .yellow : .white
     }
 
     var body: some View {
+        content
+    }
 
+    private var content: some View {
         VStack {
             if let unwrappedImage = image {
                 Image(uiImage: unwrappedImage)
@@ -42,12 +45,12 @@ struct CircleImageView_Previews: PreviewProvider {
 
         Group {
 
-            CircleImageView()
+            CircleImageView(image: nil)
                 .frame(width: 200, height: 200)
                 .background(Color(hex: "#0071BC"))
                 .environment(\.colorScheme, .light)
 
-            CircleImageView()
+            CircleImageView(image: nil)
                 .frame(width: 200, height: 200)
                 .background(Color(hex: "#3F2B1D"))
                 .environment(\.colorScheme, .dark)
